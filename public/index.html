@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chris Abuan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for active navigation link */
+        .nav-link.active {
+            color: #3b82f6; /* Blue accent */
+            border-bottom: 2px solid #3b82f6;
+        }
+        /* Hide sections by default */
+        main > section:not(#home) {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-sky-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-sky-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Chris Abuan</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-sm text-gray-700 hover:text-blue-500 transition duration-300 active" onclick="showPage('home', event)">Home</a>
+                <a href="#resume" class="nav-link text-sm text-gray-700 hover:text-blue-500 transition duration-300" onclick="showPage('resume', event)">Resume</a>
+                <a href="#projects" class="nav-link text-sm text-gray-700 hover:text-blue-500 transition duration-300" onclick="showPage('projects', event)">Projects</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-100" onclick="showPage('home', event)">Home</a>
+            <a href="#resume" class="block py-2 px-4 text-sm hover:bg-gray-100" onclick="showPage('resume', event)">Resume</a>
+            <a href="#projects" class="block py-2 px-4 text-sm hover:bg-gray-100" onclick="showPage('projects', event)">Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 lg:p-8">
+
+        <!-- Home Section -->
+        <section id="home">
+            <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                <img src="chrisabuanphoto.jpg" alt="Chris Picture" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500">
+                <h2 class="text-4xl font-bold text-gray-900 mb-2">Welcome to My Portfolio</h2>
+                <p class="text-lg text-gray-600 mb-6">I'm an enthusiastic Product Manager dedicated to building great experiences.</p>
+                <a href="#projects" onclick="showPage('projects', event)" class="bg-blue-500 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-block">View My Work</a>
+            </div>
+             <div class="mt-8 bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">My Story</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Hello! I'm Chris Abuan, a Product Manager based out of Denver, Colorado. Aside from my first two years out of college, I have spent nearly my entire career working in Telecommunications, specifically in the wireline phone business. Early on as a Pricing Analyst I learned a great deal about the wholesale voice market, established customer/vendor relationships, and focused on driving profitable revenue growth and eliminating unprofitable traffic from the network. I was fortunate to be part of a great team and we developed an early implementation of a ML price automation tool. It was a huge success, and it opened the door for me to move into a Product Manager role. I have spent the past 8 years as a Product Manager, owning the P&L for a mature product and helping to establish new ones too. Over the last 4 years I have been specifically focused on the problem of stopping illegal robocalls. 
+                <br>
+                <br>Outside the office, you can probably find me working on computers, servers, or something related to my home network. If I'm outside, it's usually doing yard work! I attended the University of Colorado where I double majored in Economics and Psychology. In terms of extracurriculars, I was also a member of the university track team, where I specialized in the 200, 400m (outdoor) and the 600y (indoor). 
+                </p>
+            </div>
+            <!-- Areas of Expertise Section -->
+            <div class="mt-8 bg-white p-8 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Areas of Expertise</h3>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">User and Market Research</span>
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">Competitive Landscape Analysis</span>
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">Product Vision & Strategy</span>
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">PRD Creation</span>
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">Feature Prioritization</span>
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">User Stories</span>
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">Analytics</span>
+                    <span class="bg-blue-100 text-blue-800 text-base font-semibold px-4 py-2 rounded-full shadow-sm">GTM</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">My Resume</h2>
+                <div class="flex justify-center mb-6">
+                    <a href="https://raw.githubusercontent.com/chrisabuan/chrisabuan.github.io/main/Abuan_Chris_Resume.pdf" download="Abuan_Chris_Resume.pdf" class="bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 transition duration-300 inline-flex items-center">
+                        <i class="fas fa-download mr-2"></i> Download PDF
+                    </a>
+                </div>
+                <div class="border rounded-lg overflow-hidden">
+                    <object data="https://github.com/chrisabuan/chrisabuan.github.io/blob/main/Abuan_Chris_Resume.pdf" type="application/pdf" width="100%" height="800px">
+                        <p class="p-4 text-center">It appears you don't have a PDF plugin for this browser. No biggie... you can <a href="https://raw.githubusercontent.com/chrisabuan/chrisabuan.github.io/main/Abuan_Chris_Resume.pdf" class="text-blue-500 hover:underline">click here to download the PDF file.</a></p>
+                    </object>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Past Projects</h2>
+                
+                <p class="text-center text-gray-600 max-w-3xl mx-auto mb-10">
+                    Due to the proprietary nature of my work, the following project descriptions have been generalized. They are intended to showcase my problem-solving approach and thought process rather than specific, confidential details.
+                </p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project Card 1 -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Project+1" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Robocalling & STIR/SHAKEN</h3>
+                            <p class="text-gray-700 mb-4">What is this robocalling problem, and how the industry started to deal with it.</p>
+                            <a href="project1.html" class="text-blue-500 hover:underline font-semibold">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Project+2" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">STIR/SHAKEN Framework Replacement</h3>
+                            <p class="text-gray-700 mb-4">A brief summary of the decision to replace an existing framework with another.</p>
+                            <a href="project2.html" class="text-blue-500 hover:underline font-semibold">View Details</a>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Project+3" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">STIR/SHAKEN in France</h3>
+                            <p class="text-gray-700 mb-4">France joins the party, and the lessons learned for global adoption.</p>
+                             <a href="project3.html" class="text-blue-500 hover:underline font-semibold">View Details</a>
+                        </div>
+                    </div>
+                     <!-- Project Card 4 -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Project+4" alt="Project 4 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">STIR/SHAKEN Global Hosted Signing Service</h3>
+                            <p class="text-gray-700 mb-4">STIR/SHAKEN is not required around the globe, but we are ready for when it happens.</p>
+                             <a href="project4.html" class="text-blue-500 hover:underline font-semibold">View Details</a>
+                        </div>
+                    </div>
+                     <!-- Project Card 5 -->
+                    <div class="bg-gray-50 border border-gray-200 rounded-lg shadow-md overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=Project+5" alt="Project 5 Screenshot" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Do Not Originate (DNO) Service Expansion</h3>
+                            <p class="text-gray-700 mb-4">Authored Project Vision and Design for an improved DNO data flow and a new service for customers.</p>
+                             <a href="project5.html" class="text-blue-500 hover:underline font-semibold">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 mt-12">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-600">
+            <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2 text-sm">
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Page Navigation Logic ---
+        function showPage(pageId, event) {
+            if (event) {
+                event.preventDefault(); // Prevent the default anchor link behavior
+            }
+            
+            // Hide all main sections
+            document.querySelectorAll('main > section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedPage = document.getElementById(pageId);
+            if (selectedPage) {
+                selectedPage.style.display = 'block';
+            }
+
+            // Update active state for navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${pageId}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Close mobile menu after selection
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+            
+            // Scroll to the top of the page
+            window.scrollTo(0, 0);
+        }
+
+        // Set the default page on initial load
+        document.addEventListener('DOMContentLoaded', () => {
+            const pageIdFromHash = window.location.hash.substring(1); // e.g. "projects"
+            if (pageIdFromHash) {
+                showPage(pageIdFromHash);
+            } else {
+                showPage('home');
+            }
+        });
+    </script>
+
+</body>
+</html>

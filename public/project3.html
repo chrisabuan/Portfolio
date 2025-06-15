@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STIR/SHAKEN in France - Chris Abuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for prose for better readability */
+        .prose-custom {
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+        .prose-custom p {
+            margin-bottom: 1.25em;
+        }
+        .prose-custom h2 {
+            font-size: 1.875rem;
+            margin-bottom: 1.25em;
+            margin-top: 1.25em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .prose-custom h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            margin-top: 1.75em;
+        }
+        .summary-item {
+             margin-bottom: 1rem;
+        }
+        .summary-item strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #111827;
+        }
+        .summary-item span {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+    </style>
+</head>
+<body class="bg-sky-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-sky-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Chris Abuan</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="index.html#resume" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Resume</a>
+                <a href="index.html#projects" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Projects</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="index.html#home" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-100">Resume</a>
+            <a href="index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Project Content -->
+    <main class="container mx-auto p-6 lg:p-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            
+            <!-- Back to Home Link -->
+            <div class="mb-8">
+                <a href="index.html#projects" class="text-blue-500 hover:underline font-semibold">
+                    &larr; Back to All Projects
+                </a>
+            </div>
+
+            <!-- Top Level Summary -->
+            <div class="mb-8 border-b pb-8">
+                <div class="summary-item">
+                    <strong>Product/Feature Name:</strong>
+                    <span>STIR/SHAKEN in France (The MAN Program)</span>
+                </div>
+                <div class="summary-item">
+                    <strong>My Role:</strong>
+                    <span>Product Manager</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Quick Summary:</strong>
+                    <span>Led the product strategy for implementing France's unique version of the STIR/SHAKEN framework, navigating complex regulatory variations to achieve compliance and establish a new service model as a "technical operator."</span>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="prose-custom">
+
+                <h2>Detailed Breakdown</h2>
+
+                <h3>The Problem:</h3>
+                <p>
+                    Following the trend in North America, France was experiencing a severe and escalating problem with illegal robocalls, leading to widespread public distrust in voice calls. The French telecom regulator, ARCEP, decided to act, creating its own set of anti-robocalling rules known as "The MAN Program" which was a nickname for "Mécanisme d'Authentification des Numéros."
+                </p>
+                <!-- Placeholder for a chart -->
+                <figure class="my-8">
+                    <img src="HiyaSOTCGlobalFinancial.jpg" alt="Chart showing the average $USD lost by those who were scammed around the globe." class="rounded-lg shadow-md mx-auto border" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/333333?text=Chart+Coming+Soon';">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">The significant cost of robocalls in France prompted swift regulatory action. Image provided by Hiya.
+                    </figcaption>
+                </figure>
+
+                <h3>The Opportunity:</h3>
+                <p>
+                    As a global voice provider, complying with ARCEP's mandate was essential to continue operating in the French market. This challenge presented an opportunity to solidify our position as a trusted international partner and to create a new service offering by acting as a "technical operator" for other carriers who needed help navigating the complex new requirements.
+                </p>
+
+                <h3>Target Persona:</h3>
+                <p>
+                    Our target users were French service providers who needed to comply with the MAN framework. Internally, the project was critical for our Network Engineering, Legal, and Compliance teams to ensure our services remained operational and lawful in a key European market.
+                </p>
+                
+                <h3>Key Insights:</h3>
+                <p>
+                    The most critical insight was that ARCEP's MAN framework, while based on STIR/SHAKEN, included several unique requirements that broke a "one-size-fits-all" approach. Details around certificate handling, attestation levels, and error reporting were different from the North American standard, creating unanticipated complexity and risk for our existing platform.
+                </p>
+
+                <h3>Product Vision:</h3>
+                <p>
+                    To develop and launch a fully compliant STIR/SHAKEN solution for the French market, establishing a new, scalable "technical operator" service model that could be adapted for future country-specific regulatory frameworks.
+                </p>
+
+                <h3>Strategic Roadmap:</h3>
+                <p>
+                    The strategy was twofold. First, achieve full compliance with the MAN framework by adapting our existing platform. This involved a deep dive into ARCEP's specifications and targeted development work. Second, concurrently develop the operational and business framework to offer our solution as a service to other providers in the French market.
+                </p>
+
+                <h3>Solution:</h3>
+                <p>
+                    We enhanced our core STIR/SHAKEN platform to handle the specific logic required by the French MAN framework. This included creating new configuration options for French operators, modifying our signing and verification services to interpret ARCEP's unique rules, and ensuring our analytics could report on the new data points required by the regulator.
+                </p>
+
+                <h3>Key Features:</h3>
+                <p>
+                    &bull; Full compliance with the French MAN framework.<br>
+                    &bull; A new "Technical Operator" service offering for the French market.<br>
+                    &bull; Successful handling of French-specific call signing and attestation rules.<br>
+                    &bull; Adapted analytics and reporting for ARCEP compliance.
+                </p>
+
+                <h3>Process & Collaboration:</h3>
+                <p>
+                    This project required intense collaboration. I worked closely with our European-based legal counsel to interpret ARCEP's technical documents (it's tough translating technical documents from French to English!). Establishing an interop feedback loop with other French carriers to test and validate our implementation helped ensure our solution met both the letter and the spirit of the new law.
+                </p>
+
+                <h3>Results & Impact:</h3>
+                <p>
+                   We successfully rolled out our compliant solution ahead of the regulatory deadline for both our own traffic and for our initial "technical operator" customers. This offering successfully converted nearly every current customer to sign up for our regulatory compliant service, and effectively secured our position in the French market with a new revenue stream from the new service offering.
+                </p>
+
+                <h3>Reflection:</h3>
+                <p>
+                    The key takeaway was a strategic one: the proliferation of country-specific variations of a "global" standard like STIR/SHAKEN was not going to be sustainable for a global provider like us. Each country represented a significant, one-off development effort. This project highlighted the need for a future platform architecture that was far more modular and configurable to handle diverse regulatory environments without requiring a full engineering cycle for each new country. 
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 mt-12">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-600">
+            <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2 text-sm">
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

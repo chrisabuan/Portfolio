@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replacing STIR/SHAKEN Frameworks - Chris Abuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for prose for better readability */
+        .prose-custom {
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+        .prose-custom p {
+            margin-bottom: 1.25em;
+        }
+        .prose-custom h2 {
+            font-size: 1.875rem;
+            margin-bottom: 1.25em;
+            margin-top: 1.25em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .prose-custom h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            margin-top: 1.75em;
+        }
+        .summary-item {
+             margin-bottom: 1rem;
+        }
+        .summary-item strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #111827;
+        }
+        .summary-item span {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+    </style>
+</head>
+<body class="bg-sky-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-sky-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Chris Abuan</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="index.html#resume" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Resume</a>
+                <a href="index.html#projects" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Projects</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="index.html#home" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-100">Resume</a>
+            <a href="index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Project Content -->
+    <main class="container mx-auto p-6 lg:p-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            
+            <!-- Back to Home Link -->
+            <div class="mb-8">
+                <a href="index.html#projects" class="text-blue-500 hover:underline font-semibold">
+                    &larr; Back to All Projects
+                </a>
+            </div>
+
+            <!-- Top Level Summary -->
+            <div class="mb-8 border-b pb-8">
+                <div class="summary-item">
+                    <strong>Product/Feature Name:</strong>
+                    <span>Replacing STIR/SHAKEN Frameworks</span>
+                </div>
+                <div class="summary-item">
+                    <strong>My Role:</strong>
+                    <span>Product Manager</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Quick Summary:</strong>
+                    <span>Spearheaded the migration of our core STIR/SHAKEN infrastructure to a new vendor, a strategic move to reduce operational costs and unlock future product development capabilities without compromising existing compliance.</span>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="prose-custom">
+
+                <h2>Detailed Breakdown</h2>
+
+                <h3>The Problem:</h3>
+                <p>
+                    While our organization had been fully STIR/SHAKEN compliant since 2019 using an on-premises third party solution, key underlying components were leased from a third-party vendor. This dependency created two major issues: a significant ongoing operational cost and a rigid framework that prevented us from developing new, value-added services our customers were beginning to ask for.
+                </p>
+
+                <h3>The Opportunity:</h3>
+                <p>
+                    By migrating to a new underlying vendor, we saw a clear opportunity to significantly reduce our annual operational expenses. More strategically, it would provide us with the flexibility to build new features and services on top of the compliance framework, turning a cost center into a potential platform for innovation and revenue generation.
+                </p>
+
+                <h3>Target Persona:</h3>
+                <p>
+                    The primary stakeholders for this project were internal. This included Network Engineering and Development teams, who would perform the migration, while our Product and Finance teams were focused on the cost-saving benefits of negotiating a new vendor contract.
+                </p>
+                
+                <h3>Key Insights:</h3>
+                <p>
+                    Our analysis showed that the capabilities we needed for future services (like advanced call analytics and dynamic call treatment) were not on our current vendor's roadmap. This confirmed that our existing partnership, while functional for basic compliance, was becoming a strategic bottleneck. The risk of inaction was stagnation and continued high costs.
+                </p>
+
+                <h3>Product Vision:</h3>
+                <p>
+                    To seamlessly transition our STIR/SHAKEN infrastructure to a more agile and cost-effective foundation, ensuring 100% continuity of our compliance posture while enabling a new wave of product innovation.
+                </p>
+
+                <h3>Strategic Roadmap:</h3>
+                <p>
+                    The migration was approached as a "like-for-like" replacement to minimize risk. **Phase 1:** Focus exclusively on swapping the underlying dependencies and performing rigorous regression testing to ensure existing functionality remained intact. **Phase 2:** Defer all new feature development until after the migration was complete, allowing us to validate the new platform and then explore its new capabilities in a subsequent project.
+                </p>
+
+                <h3>Solution:</h3>
+                <p>
+                    We executed a carefully planned migration, swapping the vendor-leased components with the new provider's infrastructure. This involved re-establishing API connections, updating configurations in our network elements, and ensuring data flowed correctly through the new system.
+                </p>
+                <!-- Placeholder for STIR/SHAKEN Framework Image -->
+                <figure class="my-8">
+                    <img src="SSDiagram2.jpg" alt="Diagram showing the STIR/SHAKEN framework swap." class="rounded-lg shadow-md mx-auto border" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/333333?text=Framework+Diagram+Here';">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">A high-level view of the STIR/SHAKEN framework components that were swapped.
+                    </figcaption>
+                </figure>
+
+                <h3>Key Features:</h3>
+                <p>
+                    The primary goal of this project was not to launch new end-user features, but to achieve platform-level outcomes to enable future products and services:<br>
+                    &bull; Successful migration of all STIR/SHAKEN dependencies to the new vendor software.<br>
+                    &bull; Maintained 100% compliance with FCC regulations throughout the transition.<br>
+                    &bull; Achieved significant reduction in annual operational costs.<br>
+                    &bull; Created new API endpoints and data repositories for future development aspirations.
+                </p>
+
+                <h3>Process & Collaboration:</h3>
+                <p>
+                    As Product Manager, I acted as the central hub for the cross-functional team in this effort. Aligning business needs with Engineering for the technical execution, collaborating with Legal and Finance to validate and recognize the business case and cost savings, and with procurement to help negotiate and finalize the new contract. Constant communication and a shared understanding of the "like-for-like" replacement strategy were critical to keeping the project on track and avoiding scope creep.
+                </p>
+
+                <h3>Results & Impact:</h3>
+                <p>
+                    The migration was completed on schedule with zero downtime or impact on our compliance status. The project resulted in a significant reduction in annual vendor costs for this service. Most importantly, this project provided the technical flexibility to begin planning a new suite of call validation and analytics services on the horizon.
+                </p>
+
+                <h3>Reflection:</h3>
+                <p>
+                    This project underscored the importance of viewing infrastructure not just as a cost center, but as a strategic asset. While a "like-for-like" replacement sounds simple, the coordination required to swap a critical, live dependency is immense. It proved the value of a phased approach, ensuring stability first before pursuing new features, which built confidence across the organization.
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 mt-12">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-600">
+            <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2 text-sm">
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

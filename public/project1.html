@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2020-2021 STIR/SHAKEN Implementation - Chris Abuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for prose for better readability */
+        .prose-custom {
+            font-size: 1.05rem; /* Slightly adjusted for new layout */
+            line-height: 1.75;
+        }
+        .prose-custom p {
+            margin-bottom: 1.25em;
+        }
+        .prose-custom h2 {
+            font-size: 1.875rem; /* 30px */
+            margin-bottom: 1.25em;
+            margin-top: 1.25em; /* Adjusted spacing */
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .prose-custom h3 {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            margin-top: 1.75em;
+        }
+        .summary-item {
+             margin-bottom: 1rem;
+        }
+        .summary-item strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #111827; /* Darker grey */
+        }
+        .summary-item span {
+            font-size: 1.125rem;
+            color: #4b5563; /* Medium grey */
+        }
+
+    </style>
+</head>
+<body class="bg-sky-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-sky-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Chris Abuan</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="index.html#resume" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Resume</a>
+                <a href="index.html#projects" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Projects</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="index.html#home" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-100">Resume</a>
+            <a href="index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Project Content -->
+    <main class="container mx-auto p-6 lg:p-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            
+            <!-- Back to Home Link -->
+            <div class="mb-8">
+                <a href="index.html#projects" class="text-blue-500 hover:underline font-semibold">
+                    &larr; Back to All Projects
+                </a>
+            </div>
+
+            <!-- Top Level Summary -->
+            <div class="mb-8 border-b pb-8">
+                <div class="summary-item">
+                    <strong>Product/Feature Name:</strong>
+                    <span>2020-2021 STIR/SHAKEN Implementation</span>
+                </div>
+                <div class="summary-item">
+                    <strong>My Role:</strong>
+                    <span>Product Manager</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Quick Summary:</strong>
+                    <span>Led the product vision for a multi-year initiative to comply with the TRACED Act, implementing a standards-based STIR/SHAKEN framework to combat illegal robocalling across a complex network of legacy hardware and software with production voice services.</span>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="prose-custom">
+
+                <h2>Detailed Breakdown</h2>
+
+                <h3>The Problem:</h3>
+                <p>
+                    Illegal robocalling had reached epidemic levels, eroding customer trust in voice communication and leading to significant regulatory pressure. The TRACED Act mandated that all carriers implement STIR/SHAKEN by a strict deadline, a complex technical challenge with no existing blueprint for our diverse network infrastructure.
+                </p>
+                <!-- Chart showing the problem -->
+                <figure class="my-8">
+                    <img src="https://cdn.statcdn.com/Infographic/images/normal/16854.jpeg" alt="Chart showing the dramatic increase in robocalls in the U.S., with 26.3 billion in 2018." class="rounded-lg shadow-md mx-auto border">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">The sharp rise in robocalls, as shown in this 2019 Statista chart, created the regulatory pressure that led to the TRACED Act.
+                    </figcaption>
+                </figure>
+
+
+                <h3>The Opportunity:</h3>
+                <p>
+                    Beyond mere compliance, this was an opportunity to restore customer confidence, differentiate our service by offering enhanced security, and build a foundational framework for future identity-based voice products. Successfully implementing this would not only protect our customers but also position us as a leader in network security.
+                </p>
+
+                <h3>Target Persona:</h3>
+                <p>
+                    The primary focus was on two groups: 
+		    &bull; 1) Our internal network architects and engineers who needed to implement the changes across dozens of disparate systems without causing service interruptions. 
+		    &bull; 2) All of our service provider customers (both enterprise and wholesale) who were ultimately the beneficiaries of participating in a more secure calling experience.
+                </p>
+                
+                <h3>Key Insights:</h3>
+                <p>
+                    Early analysis revealed that a "one-size-fits-all" solution was impossible. Call flows for our legacy TDM services were vastly different from our modern IP products. We also discovered through collaboration with other carriers that interoperability of the new SIP Identity Header would be the single biggest point of failure if not handled proactively!
+                </p>
+
+                <h3>Product Vision:</h3>
+                <p>
+                    To create a seamless, secure, trusted voice network and lay the foundation for future trusted voice services.
+                </p>
+
+                <h3>Strategic Roadmap:</h3>
+                <p>
+                    The project was broken into phases, prioritized by network segments with the highest traffic and risk. Phase 1 focused on our core IP network. Phase 2 addressed complex interconnections with other carriers. Phase 3 tackled legacy network gateways and end of life equipment. This phased approach allowed for proper risk management and allowed time for program adjustments as needed.
+                </p>
+
+                <h3>Solution:</h3>
+                <p>
+                    The solution involved deploying both an Authentication Service (STI-AS) and Verification Service (STI-VS). These services would interact with our core network elements to sign outbound calls with the proper attestation level (A, B, or C) and verify already-signed inbound calls destined to our customers and their end user subscribers.
+                </p>
+                <!-- Chart showing the solution -->
+                <figure class="my-8">
+                    <img src="SSDiagram1.jpg" alt="A simple call flow diagram showing how STIR/SHAKEN works." class="rounded-lg shadow-md mx-auto border">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">A simplified STIR/SHAKEN call flow, showing the STI-AS and STI-VS services.
+                    </figcaption>
+                </figure>
+
+                <h3>Key Features:</h3>
+                <p>
+                    &bull; Signing of outbound calls with A, B, C attestation.<br>
+                    &bull; Verification of inbound call signatures.<br>
+                    &bull; Centralized policy engine for routing and handling of unverified calls.<br>
+                    &bull; Interoperability testing and certification with major carrier partners.<br>
+                    &bull; Analytics dashboard for monitoring signed/unsigned traffic and attestation levels.
+                </p>
+
+                <h3>Process & Collaboration:</h3>
+                <p>
+                    This was a massive cross-functional effort. I worked daily with Architecture & Engineering to ensure regulatory requirements were properly represented in High Level Design (HLD) technical specifications. I collaborated with Marketing and Sales to develop external communications, and with our legal team to ensure every step met the FCC's interpretation of the law. Regular syncs with other Tier 1 carriers were crucial for solving interoperability challenges.
+                </p>
+
+                <h3>Results & Impact:</h3>
+                <p>
+                    We successfully met the FCC deadline, signing over 95% of all IP-generated traffic within the first month and positioned us as one of the first Tier 1 carriers to be fully compliant.
+                </p>
+
+                <h3>Reflection:</h3>
+                <p>
+                    The biggest lesson learned for me was that I could have set more realistic expectations (both internally and externally) of what STIR/SHAKEN was supposed to accomplish. While the end goal for everybody is to eliminate illegal robocalls, this solution had a general misconception that it was going to solve the problem in its entirety. Ultimately, those who were deeply involved understood that this was just the first step in what would need to be many in order to start chipping away at the whole problem.
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 mt-12">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-600">
+            <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2 text-sm">
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

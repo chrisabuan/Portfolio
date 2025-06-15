@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do Not Originate (DNO) Service Expansion - Chris Abuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for prose for better readability */
+        .prose-custom {
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+        .prose-custom p {
+            margin-bottom: 1.25em;
+        }
+        .prose-custom h2 {
+            font-size: 1.875rem;
+            margin-bottom: 1.25em;
+            margin-top: 1.25em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .prose-custom h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            margin-top: 1.75em;
+        }
+        .summary-item {
+             margin-bottom: 1rem;
+        }
+        .summary-item strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #111827;
+        }
+        .summary-item span {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+    </style>
+</head>
+<body class="bg-sky-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-sky-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Chris Abuan</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="index.html#resume" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Resume</a>
+                <a href="index.html#projects" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Projects</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="index.html#home" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-100">Resume</a>
+            <a href="index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Project Content -->
+    <main class="container mx-auto p-6 lg:p-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            
+            <!-- Back to Home Link -->
+            <div class="mb-8">
+                <a href="index.html#projects" class="text-blue-500 hover:underline font-semibold">
+                    &larr; Back to All Projects
+                </a>
+            </div>
+
+            <!-- Top Level Summary -->
+            <div class="mb-8 border-b pb-8">
+                <div class="summary-item">
+                    <strong>Product/Feature Name:</strong>
+                    <span>Do Not Originate (DNO) Service Expansion</span>
+                </div>
+                <div class="summary-item">
+                    <strong>My Role:</strong>
+                    <span>Product Manager</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Quick Summary:</strong>
+                    <span>Authored the Product Requirements Document (PRD) for a strategic initiative to evolve our robocall mitigation efforts by automating our internal DNO processes and launching a new, high-margin DNO protection service for customers.</span>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="prose-custom">
+
+                <h2>Detailed Breakdown</h2>
+
+                <h3>The Problem:</h3>
+                <p>
+                    In 2022, the FCC mandated that all Gateway Providers—those serving as the entry point for foreign calls into the US—must block calls from numbers on any "reasonable" Do Not Originate (DNO) list. Eventually this requirement was expanded to all voice providers in the United States. While we were compliant using a rudimentary, manually-updated list from the Industry Traceback Group (ITG), it was not as comprehensive or dynamic as other third-party solutions, representing a potential area of risk and inefficiency.
+                </p>
+
+                <h3>The Opportunity:</h3>
+                <p>
+                    This presented a two-fold opportunity. First, we could enhance our compliance posture and demonstrate our commitment to ecosystem health by automating our processes and integrating a more robust, dynamic third-party DNO list. Second, we could productize this capability and offer a new DNO protection service to our own customers, allowing them to safeguard their inbound-only numbers from being spoofed, creating a new revenue stream.
+                </p>
+
+                <h3>Target Persona:</h3>
+                <p>
+                    The project targeted two distinct groups:<br>
+                    1) Our Internal Engineering team who would benefit from automated, more reliable DNO list management.<br>
+                    2) All Service Provider Customers (e.g., call centers, businesses with inbound-only numbers) who needed a tool to prevent their numbers from being used in fraudulent outbound calling campaigns.
+                </p>
+                
+                <h3>Key Insights:</h3>
+                <p>
+                    Our internal analysis showed that the immediate, incremental benefit of blocking more calls by switching to the new list was relatively small. However, the strategic value was immense. It showed a commitment beyond minimum compliance and leveraged the unique industry position of a third-party provider. The most significant insight was the potential to create a near-100% margin, revenue-generating product from a compliance-driven initiative.
+                </p>
+
+                <h3>Product Vision:</h3>
+                <p>
+                    To transform a mandatory compliance function into a strategic asset by automating our internal DNO process and launching a new, self-service DNO protection product for our customers, reinforcing our role as a leader in robocall mitigation.
+                </p>
+                <!-- Placeholder for Vision Diagram -->
+                <figure class="my-8">
+                    <img src="DataFlow1.jpg" alt="A diagram illustrating the before DNO architecture." class="rounded-lg shadow-md mx-auto border">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">A high-level view of the manual DNO processes and no automated data flows.
+                    </figcaption>
+                </figure>
+
+
+                <h3>Strategic Roadmap:</h3>
+                <p>
+                    I designed a PRD with a two-phased approach:<br>
+                    &bull; Phase 1: Internal Automation. Integrate with the third-party DNO provider to replace our manual ITG list process with a dynamic, automated system.<br>
+                    &bull; Phase 2: Customer-Facing Product. Build a portal for customers to manage and submit their own inbound-only numbers to the DNO list, creating our third revenue-generating robocall mitigation service.
+                </p>
+
+                <h3>Solution:</h3>
+                <p>
+                    The designed solution involved two key workstreams. Internally, our systems would be configured to pull the DNO list from the new provider via a real-time API. Externally, we would develop a simple, intuitive customer portal where users could upload and manage lists of their inbound-only numbers, which would then be fed into the same DNO service for protection across the ecosystem.
+                </p>
+                <!-- Placeholder for DNO Solution Diagram -->
+                <figure class="my-8">
+                    <img src="DataFlow2.jpg" alt="A diagram illustrating the new DNO service solution architecture." class="rounded-lg shadow-md mx-auto border">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">A high-level view of the automated DNO service and customer portal data flow.
+                    </figcaption>
+                </figure>
+
+
+                <h3>Key Features:</h3>
+                <p>
+                    Internal Automation:<br>
+                    &bull; Automated API integration with third-party DNO list provider.<br>
+                    &bull; Current list availability provided in a snowflake database.<br>
+                    &bull; Real-time updating of blocking rules on our gateway network elements.<br><br>
+                    Customer DNO Service:<br>
+                    &bull; Customer portal for self-service number submission.<br>
+                    &bull; Ability for customers to add, view, and remove their inbound-only numbers.<br>
+                    &bull; Reporting to show customers when their numbers were protected.
+                </p>
+
+                <h3>Process & Collaboration:</h3>
+                <p>
+                    As the author of the PRD, my role was to define the "why" and "what" of the project. I conducted the analysis to identify the opportunity, outlined the business case, defined the features and user flows, and worked with Engineering to validate the technical feasibility. This document served as the blueprint for the project, aligning all stakeholders from Legal to Finance to Engineering.
+                </p>
+
+                <h3>Results & Impact:</h3>
+                <p>
+                    While the project was fully designed and approved but never launched due to shifting priorities, the business case was compelling. The costs were negligible as the core infrastructure was already in place. The new DNO service was projected to be a near-100% margin product, turning a compliance necessity into a source of profitable growth.
+                </p>
+
+                <h3>Reflection:</h3>
+                <p>
+                    This project was a masterclass in product strategy — finding the hidden opportunity within a regulatory mandate. It proved that with the right perspective, compliance-driven work doesn't have to be just a cost center. I learned the power of a well-researched PRD to align an entire organization around a vision, even if external factors prevent its ultimate launch.
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 mt-12">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-600">
+            <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2 text-sm">
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

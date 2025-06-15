@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global S/S Interoperability PoC - Chris Abuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for prose for better readability */
+        .prose-custom {
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+        .prose-custom p {
+            margin-bottom: 1.25em;
+        }
+        .prose-custom h2 {
+            font-size: 1.875rem;
+            margin-bottom: 1.25em;
+            margin-top: 1.25em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .prose-custom h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            margin-top: 1.75em;
+        }
+        .summary-item {
+             margin-bottom: 1rem;
+        }
+        .summary-item strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #111827;
+        }
+        .summary-item span {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+    </style>
+</head>
+<body class="bg-sky-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-sky-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">Chris Abuan</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="index.html#resume" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Resume</a>
+                <a href="index.html#projects" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Projects</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="index.html#home" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-100">Resume</a>
+            <a href="index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Project Content -->
+    <main class="container mx-auto p-6 lg:p-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            
+            <!-- Back to Home Link -->
+            <div class="mb-8">
+                <a href="index.html#projects" class="text-blue-500 hover:underline font-semibold">
+                    &larr; Back to All Projects
+                </a>
+            </div>
+
+            <!-- Top Level Summary -->
+            <div class="mb-8 border-b pb-8">
+                <div class="summary-item">
+                    <strong>Product/Feature Name:</strong>
+                    <span>Global STIR/SHAKEN Interoperability PoC</span>
+                </div>
+                <div class="summary-item">
+                    <strong>My Role:</strong>
+                    <span>Product Manager / PoC Coordinator</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Quick Summary:</strong>
+                    <span>Led a strategic proof-of-concept with international carrier partners to validate the feasibility of a global, non-jurisdictional STIR/SHAKEN framework, aiming to solve the emerging crisis of fragmented, country-specific implementations.</span>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="prose-custom">
+
+                <h2>Detailed Breakdown</h2>
+
+                <h3>The Problem:</h3>
+                <p>
+                    After successfully deploying STIR/SHAKEN in the US and then a unique version in France, a critical strategic risk became clear: if every country created its own bespoke version of the framework, the complexity for global carriers would become an interoperability nightmare. Managing dozens of country-specific rules, certificate authorities, and policies would be unsustainable and stifle innovation.
+                </p>
+                <!-- Placeholder for world network image -->
+                <figure class="my-8">
+                    <img src="global_network_diagram.png" alt="Diagram showing a global telecommunications network." class="rounded-lg shadow-md mx-auto border" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/333333?text=Global+Network+Diagram';">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">The challenge of maintaining interoperability across fragmented global networks.
+                    </figcaption>
+                </figure>
+
+
+                <h3>The Opportunity:</h3>
+                <p>
+                    This challenge presented a vital opportunity to be an industry leader and get ahead of the problem. We could prove that the fundamental IETF and ATIS specifications for STIR/SHAKEN were robust enough to work on a global scale, using international numbering and a non-jurisdictional Certificate Authority. A successful PoC would create a blueprint for a single, scalable global product, saving immense future development costs and complexity.
+                </p>
+
+                <h3>Target Persona:</h3>
+                <p>
+                    The primary audience for this PoC was internal and strategic: This effort had a vested interest from our CTO with full support. Product, Legal, and Engineering were working toward confirming a scalable, long-term vision of STIR/SHAKEN for our global voice network was possible. Externally, our partners are all major names that you've probably heard of before.
+                </p>
+                
+                <h3>Key Insights:</h3>
+                <p>
+                    The core technical challenge wasn't the protocol itself, but the governance structure and unique requirements around it. By proposing a model with a non-jurisdictional Global Policy Administrator (G-PA) as well as a Global Certificate Authority (G-CA), we could decouple the technical standard from the country-specific regulatory whims, allowing for a truly interoperable global ecosystem.
+                </p>
+
+                <h3>Product Vision:</h3>
+                <p>
+                    To prove that a single, standards-based STIR/SHAKEN implementation can function globally, creating the foundation for a unified product that simplifies compliance for international carriers and fosters a worldwide trusted voice network. 
+                </p>
+
+                <h3>Strategic Roadmap:</h3>
+                <p>
+                    The PoC was designed to be lean and focused.<br> 
+                    &bull; Align with key international carrier partners on testing parameters and success criteria.<br>
+                    &bull; Execute a series of controlled tests using international E.164 numbers and certificates from a non-jurisdictional Certificate Authority.<br>
+                    &bull; Document and publish the results internally and share with partners.<br>
+                    &bull; Gain critical mass support and then launch the ecosystem. 
+                </p>
+
+                <h3>Solution:</h3>
+                <p>
+                    The PoC utilized our existing US/Canada STIR/SHAKEN implementation as the testbed. We configured it to interact with a third-party Global Certificate Authority and initiated test calls using international numbering plans between our network and our partners' networks to validate that calls could be signed and verified correctly across borders using the standardized specifications. In addition, the ecosystem would be completely opt-in and would encourage governments around the globe to opt-in rather than start from scratch. 
+                </p>
+                 <!-- Placeholder for interconnected framework image -->
+                <figure class="my-8">
+                    <img src="interconnected_framework.png" alt="Diagram showing an interconnected STIR/SHAKEN framework." class="rounded-lg shadow-md mx-auto border" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/333333?text=Interconnected+Framework+Diagram';">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">A conceptual diagram of the interconnected global STIR/SHAKEN framework.
+                    </figcaption>
+                </figure>
+
+                <h3>Key Features:</h3>
+                <p>
+                    The PoC focused on validating core technical capabilities:<br>
+                    &bull; Successful call signing using a third-party, non-jurisdictional Certificate Authority.<br>
+                    &bull; End-to-end call flow using global E.164 numbering.<br>
+                    &bull; Cross-carrier verification of signatures between international partners.<br>
+                    &bull; Documentation of results to prove interoperability success.
+                </p>
+
+                <h3>Process & Collaboration:</h3>
+                <p>
+                    My role was to coordinate the entire effort. I worked with **Product and A&E** to define the testing parameters, collaborated with **Sales** to align with our carrier partners, and liaised with **Legal** to ensure the PoC's structure was sound. I executed the testing scenarios, documented every result, and created the final report that was shared with all participants.
+                </p>
+
+                <h3>Results & Impact:</h3>
+                <p>
+                    Success! The PoC definitively proved that the existing ATIS and IETF specifications for STIR/SHAKEN worked perfectly with international numbering and a global Certificate Authority. This validated our thesis and provided the critical data needed to greenlight the development of a unified, global product, potentially saving millions in future one-off development costs.
+                </p>
+
+                <h3>Reflection:</h3>
+                <p>
+                    This project was a powerful lesson in proactive, strategic thinking. Instead of waiting for the interoperability problem to become unmanageable, we proved a path forward. It demonstrated that a well-designed PoC can effectively de-risk a major strategic initiative and build organizational alignment around a complex, long-term vision. It also showed that with the right posturing, a global service offering could be accepted into the existing ecosystem.
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 mt-12">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-600">
+            <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2 text-sm">
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
