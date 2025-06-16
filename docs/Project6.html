@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hosted Signing Service - Chris Abuan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for prose for better readability */
+        .prose-custom {
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+        .prose-custom p {
+            margin-bottom: 1.25em;
+        }
+        .prose-custom h2 {
+            font-size: 1.875rem;
+            margin-bottom: 1.25em;
+            margin-top: 1.25em;
+            padding-bottom: 0.5em;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .prose-custom h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5em;
+            margin-top: 1.75em;
+        }
+        .summary-item {
+             margin-bottom: 1rem;
+        }
+        .summary-item strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #111827;
+        }
+        .summary-item span {
+            font-size: 1.125rem;
+            color: #4b5563;
+        }
+
+    </style>
+</head>
+<body class="bg-sky-100 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-sky-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-2 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">
+                <a href="index.html" class="hover:text-blue-500 transition duration-300">Chris Abuan</a>
+            </h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#home" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Home</a>
+                <a href="index.html#resume" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Resume</a>
+                <a href="index.html#projects" class="text-sm text-gray-700 hover:text-blue-500 transition duration-300">Projects</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white">
+            <a href="index.html#home" class="block py-2 px-4 text-sm hover:bg-gray-100">Home</a>
+            <a href="index.html#resume" class="block py-2 px-4 text-sm hover:bg-gray-100">Resume</a>
+            <a href="index.html#projects" class="block py-2 px-4 text-sm hover:bg-gray-100">Projects</a>
+        </div>
+    </header>
+
+    <!-- Main Project Content -->
+    <main class="container mx-auto p-6 lg:p-8">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            
+            <!-- Back to Home Link -->
+            <div class="mb-8">
+                <a href="index.html#projects" class="text-blue-500 hover:underline font-semibold">
+                    &larr; Back to All Projects
+                </a>
+            </div>
+
+            <!-- Top Level Summary -->
+            <div class="mb-8 border-b pb-8">
+                <div class="summary-item">
+                    <strong>Product/Feature Name:</strong>
+                    <span>Hosted Signing Service (PaaS)</span>
+                </div>
+                <div class="summary-item">
+                    <strong>My Role:</strong>
+                    <span>Product Manager</span>
+                </div>
+                <div class="summary-item">
+                    <strong>Quick Summary:</strong>
+                    <span>Defined and guided the vision, strategy, and launch of the company's first revenue-generating STIR/SHAKEN Platform as a Service (PaaS), successfully turning a complex compliance mandate into a profitable product.</span>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="prose-custom">
+
+                <h2>Detailed Breakdown</h2>
+
+                <h3>The Problem:</h3>
+                <p>
+                    With STIR/SHAKEN compliance deadlines rolling out across the telecom industry, simply signing our customers' calls wasn't a sustainable long-term solution. We saw the writing on the wall: the FCC would eventually require service providers to take ownership of signing their own calls. Our prediction was confirmed when a new FCC Report & Order suggested exactly that, creating an urgent need for our customers to have a way to sign calls using their own STIR/SHAKEN certificate.
+                </p>
+
+                <h3>The Opportunity:</h3>
+                <p>
+                    This regulatory shift presented a classic "0 to 1" product opportunity. We could move beyond just being compliant and create a new Platform as a Service (PaaS) that would empower our customers to meet their own compliance obligations. The goal was to build a STIR/SHAKEN service that allowed customers to sign calls using their own digital certificates, creating a new, valuable, and revenue-generating product line from a market necessity.
+                </p>
+
+                <h3>Target Persona:</h3>
+                <p>
+                    The primary target customer was any service provider customer who was not yet signing their own calls. This included a wide range of businesses that needed a straightforward path to compliance without having to build and maintain their own complex signing infrastructure. I interviewed several key customers to understand their primary concerns and feature priorities, which directly informed the product roadmap.
+                </p>
+
+                <h3>Key Insights:</h3>
+                <p>
+                    Our research and customer interviews revealed that customers desired compliance without complexity. The most critical insight was that speed-to-market was essential. Providing a simple, secure certificate upload method was far more valuable to our target users than waiting to build complex, time-consuming API integrations. This understanding validated that a PaaS model focused on usability was the right approach.
+                </p>
+                
+                <h3>Product Vision:</h3>
+                <p>
+                    To create an intuitive, reliable, and secure STIR/SHAKEN Platform as a Service that abstracts away the technical complexity of call signing, allowing customers to easily use their own certificates and control their attestation decisions, thereby ensuring their own compliance while relying on our robust infrastructure.
+                </p>
+
+                <h3>Strategic Roadmap:</h3>
+                <p>
+                    I outlined a two-phased approach to get the product to market quickly while allowing for iterative improvement:<br>
+                    &bull; <strong>Phase 1 (MVP Launch):</strong> Focus on the core functionality—a stable signing service with secure, manual certificate uploads. The goal was to capture early adopters, validate the core concept, and establish a crucial feedback loop.<br>
+                    &bull; <strong>Phase 2 (Full-Feature Expansion):</strong> Use insights from MVP feedback to build out the platform with enhanced reporting, advanced user management controls, and other high-value features identified by our initial user base.
+                </p>
+
+                <h3>Solution:</h3>
+                <p>
+                    We designed a platform where our service performs the technical function of signing the call, but the two key components for compliance—the customer's certificate and their attestation decision—remain entirely under their control. The main technical challenge was determining how to securely get a customer's certificate into our platform. After evaluating options, we chose to build a simple, secure upload path via our portal rather than pursuing complex and time-consuming API integrations with numerous Certificate Authorities, which prioritized speed-to-market and user simplicity. However, customers could connect to our platform directly if they wanted a hands-off and automated approach of transferring their certificates. 
+                </p>
+                <!-- Placeholder for Solution Diagram -->
+                <figure class="my-8">
+                    <img src="https://placehold.co/800x400/e0f2fe/334155?text=Solution+Architecture" alt="A diagram illustrating the hosted signing service solution architecture." class="rounded-lg shadow-md mx-auto border">
+                    <figcaption class="text-center text-sm text-gray-500 mt-2">High-level architecture of the Hosted Signing Service platform.</figcaption>
+                </figure>
+
+                <h3>Key Features:</h3>
+                <p>
+                    The final product was a comprehensive PaaS solution that included:<br>
+                    &bull; <strong>Customer-Issued Certificates:</strong> The platform was architected to use the customer's certificate, issued by an approved Certificate Authority (STI-CA), for signing.<br>
+                    &bull; <strong>Customer-Controlled Attestation:</strong> Customers retained full control over the attestation level for their calls, a key requirement for compliance.<br>
+                    &bull; <strong>Secure Certificate Management:</strong> A straightforward and encrypted path for customers to upload and manage their certificates via the user portal.<br>
+                    &bull; <strong>Data Security Measures:</strong> All sensitive customer data is encrypted while at rest.<br>
+                    &bull; <strong>Migration Path:</strong> The service also served as a key incentive to encourage customer migration from a legacy network to our new, go-forward network platform.
+                </p>
+
+                <h3>Process & Collaboration:</h3>
+                <p>
+                    As the Product Manager, I was responsible for the end-to-end product lifecycle. This involved establishing the product vision, defining the roadmap, and representing the voice of the customer to stakeholders and development teams. I collaborated closely with our Legal team to solve for compliance concerns, worked with Marketing to create effective messaging and web content, and provided key market research to the Commercial team to help establish pricing and incentives. My role was to ensure all teams were aligned and moving toward the same goal: a successful product launch.
+                </p>
+
+                <h3>Results & Impact:</h3>
+                <p>
+                    The project was a success. We delivered the Minimum Viable Product (MVP) ahead of schedule, which gave us a crucial window to establish a feedback loop with early adopters. This iterative process allowed us to refine the service before the full-feature launch. The Hosted Signing Service became our first revenue-generating STIR/SHAKEN product, successfully turning a regulatory requirement into a new business opportunity and helping to accelerate the adoption of our go-forward network platform.
+                </p>
+
+                <h3>Reflection:</h3>
+                <p>
+                    This project was a powerful lesson in the value of foresight in a regulated industry. By anticipating the FCC's next move, we were able to get ahead of the market and provide a solution right when our customers needed it most. The decision to deliver an MVP early proved invaluable, reinforcing the importance of iterative development and customer feedback. Ultimately, the success of the Hosted Signing Service demonstrated how effective cross-functional collaboration between Product, Engineering, Legal, and Marketing can transform a compliance challenge into a strategic commercial asset. 
+                </p>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-sky-100 mt-12">
+        <div class="container mx-auto px-6 py-2 text-center text-gray-600">
+            <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
+            <div class="flex justify-center space-x-4 mt-2 text-sm">
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
