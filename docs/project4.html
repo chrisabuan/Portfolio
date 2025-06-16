@@ -87,15 +87,15 @@
             <div class="mb-8 border-b pb-8">
                 <div class="summary-item">
                     <strong>Product/Feature Name:</strong>
-                    <span>Global STIR/SHAKEN Interoperability PoC</span>
+                    <span>Global STIR/SHAKEN PoC</span>
                 </div>
                 <div class="summary-item">
                     <strong>My Role:</strong>
-                    <span>Product Manager / PoC Coordinator</span>
+                    <span>Product Manager</span>
                 </div>
                 <div class="summary-item">
                     <strong>Quick Summary:</strong>
-                    <span>Led a strategic proof-of-concept with international carrier partners to validate the feasibility of a global, non-jurisdictional STIR/SHAKEN framework, aiming to solve the emerging crisis of fragmented, country-specific implementations.</span>
+                    <span>Led a strategic proof-of-concept effort with international carrier partners to validate the feasibility of a global, non-jurisdictional STIR/SHAKEN framework, aiming to solve the emerging crisis of fragmented, country-specific implementations.</span>
                 </div>
             </div>
 
@@ -106,24 +106,17 @@
 
                 <h3>The Problem:</h3>
                 <p>
-                    After successfully deploying STIR/SHAKEN in the US and then a unique version in France, a critical strategic risk became clear: if every country created its own bespoke version of the framework, the complexity for global carriers would become an interoperability nightmare. Managing dozens of country-specific rules, certificate authorities, and policies would be unsustainable and stifle innovation.
+                    After successfully deploying STIR/SHAKEN in the US and then a unique version in France, a critical strategic risk became clear: if every country created its own bespoke version of the standards, the complexity for global carriers would become an interoperability nightmare. Managing dozens of country-specific rules, certificate authorities, and policies would be unsustainable and stifle innovation.
                 </p>
-                <!-- Placeholder for world network image -->
-                <figure class="my-8">
-                    <img src="global_network_diagram.png" alt="Diagram showing a global telecommunications network." class="rounded-lg shadow-md mx-auto border" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/333333?text=Global+Network+Diagram';">
-                    <figcaption class="text-center text-sm text-gray-500 mt-2">The challenge of maintaining interoperability across fragmented global networks.
-                    </figcaption>
-                </figure>
-
 
                 <h3>The Opportunity:</h3>
                 <p>
-                    This challenge presented a vital opportunity to be an industry leader and get ahead of the problem. We could prove that the fundamental IETF and ATIS specifications for STIR/SHAKEN were robust enough to work on a global scale, using international numbering and a non-jurisdictional Certificate Authority. A successful PoC would create a blueprint for a single, scalable global product, saving immense future development costs and complexity.
+                    This challenge presented a vital opportunity to be an industry leader and suggesting a preferred design of our own. We could prove that the fundamental IETF (Internet Engineering Task Force) and ATIS (Alliance for Telecommunications Industry Standards) specifications for STIR/SHAKEN were robust enough to work on a global scale, using international numbering and a non-jurisdictional Certificate Authority. A successful PoC would create a blueprint for a single, scalable global product, saving immense future development costs and complexity.
                 </p>
 
                 <h3>Target Persona:</h3>
                 <p>
-                    The primary audience for this PoC was internal and strategic: This effort had a vested interest from our CTO with full support. Product, Legal, and Engineering were working toward confirming a scalable, long-term vision of STIR/SHAKEN for our global voice network was possible. Externally, our partners are all major names that you've probably heard of before.
+                    This Proof of Concept was a collaboration externally, but the effort was strategic as there was a vested interest from our CTO with full resource support. Product, Legal, and Engineering were working toward confirming a scalable, long-term vision of STIR/SHAKEN for our global voice network was possible. Externally, our partners are all major brands who would encourage adoption among others in the industry.
                 </p>
                 
                 <h3>Key Insights:</h3>
@@ -140,18 +133,19 @@
                 <p>
                     The PoC was designed to be lean and focused.<br> 
                     &bull; Align with key international carrier partners on testing parameters and success criteria.<br>
-                    &bull; Execute a series of controlled tests using international E.164 numbers and certificates from a non-jurisdictional Certificate Authority.<br>
+                    &bull; Execute a series of controlled tests using international E.164 numbers.<br>
+                    &bull; Execute a series of controlled tests using non-jurisdictional certificates.<br>
                     &bull; Document and publish the results internally and share with partners.<br>
                     &bull; Gain critical mass support and then launch the ecosystem. 
                 </p>
 
                 <h3>Solution:</h3>
                 <p>
-                    The PoC utilized our existing US/Canada STIR/SHAKEN implementation as the testbed. We configured it to interact with a third-party Global Certificate Authority and initiated test calls using international numbering plans between our network and our partners' networks to validate that calls could be signed and verified correctly across borders using the standardized specifications. In addition, the ecosystem would be completely opt-in and would encourage governments around the globe to opt-in rather than start from scratch. 
+                    The PoC utilized our existing US/Canada STIR/SHAKEN implementation as the testbed. By carving out a swim lane utilizing the same infrastructure but separate from live production traffic, we configured it to interact with a third-party Global Certificate Authority and initiated test calls using international numbering plans between our network and our partners' networks to validate that calls could be signed and verified correctly across borders. 
                 </p>
                  <!-- Placeholder for interconnected framework image -->
                 <figure class="my-8">
-                    <img src="interconnected_framework.png" alt="Diagram showing an interconnected STIR/SHAKEN framework." class="rounded-lg shadow-md mx-auto border" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/333333?text=Interconnected+Framework+Diagram';">
+                    <img src="interconnected_framework.jpg" alt="Diagram showing an interconnected STIR/SHAKEN framework." class="rounded-lg shadow-md mx-auto border" onerror="this.onerror=null;this.src='https://placehold.co/800x450/e2e8f0/333333?text=Interconnected+Framework+Diagram';">
                     <figcaption class="text-center text-sm text-gray-500 mt-2">A conceptual diagram of the interconnected global STIR/SHAKEN framework.
                     </figcaption>
                 </figure>
@@ -167,17 +161,19 @@
 
                 <h3>Process & Collaboration:</h3>
                 <p>
-                    My role was to coordinate the entire effort. I worked with **Product and A&E** to define the testing parameters, collaborated with **Sales** to align with our carrier partners, and liaised with **Legal** to ensure the PoC's structure was sound. I executed the testing scenarios, documented every result, and created the final report that was shared with all participants.
+                    My role was to coordinate the entire effort as we had the global carrier network with the flexibility to set up this testbed. I worked with Engineering and the other founding members to define the testing parameters, collaborated with Sales to align the overall future-goals with our partners, and ensured the PoC's structure was sound from a legal and regulatory perspective. We executed the testing scenarios, documented every result, and created the final report that was shared with all participants. 
                 </p>
 
                 <h3>Results & Impact:</h3>
                 <p>
-                    Success! The PoC definitively proved that the existing ATIS and IETF specifications for STIR/SHAKEN worked perfectly with international numbering and a global Certificate Authority. This validated our thesis and provided the critical data needed to greenlight the development of a unified, global product, potentially saving millions in future one-off development costs.
+                    Success! The PoC definitively proved that the existing ATIS and IETF specifications for STIR/SHAKEN worked perfectly with international numbering and a global Certificate Authority. This validated our hypothesis and provided the critical data needed to greenlight the development of a unified, global product, potentially saving millions in future one-off development costs. 
+
+ADD In addition, the ecosystem would be completely opt-in and would encourage governments around the globe to opt-in rather than start from scratch. 
                 </p>
 
                 <h3>Reflection:</h3>
                 <p>
-                    This project was a powerful lesson in proactive, strategic thinking. Instead of waiting for the interoperability problem to become unmanageable, we proved a path forward. It demonstrated that a well-designed PoC can effectively de-risk a major strategic initiative and build organizational alignment around a complex, long-term vision. It also showed that with the right posturing, a global service offering could be accepted into the existing ecosystem.
+                    This project was a powerful lesson in proactive, strategic thinking. Instead of waiting for the interoperability problem to become unmanageable, we proved a more manageable path forward. We demonstrated that a well-designed PoC can effectively de-risk a major strategic initiative and build organizational alignment around a complex, long-term vision. It also showed that with the right posturing, a global service offering could easily be accepted into the existing ecosystem from a technical perspective.
                 </p>
 
             </div>
