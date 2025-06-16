@@ -225,9 +225,19 @@
             window.scrollTo(0, 0);
         }
 
-        // Set the default page on initial load
-        document.addEventListener('DOMContentLoaded', () => {
+    // Set the default page on initial load
+    document.addEventListener('DOMContentLoaded', () => {
+   	// Get the section name from the URL (e.g., #projects)
+    	const pageId = window.location.hash.substring(1);
+
+	// If the URL has a valid hash like #resume or #projects, show that page
+	if (pageId === 'resume' || pageId === 'projects') {
+            showPage(pageId, new Event('direct'));
+	} else {
+            // Otherwise, default to the home page
             showPage('home', new Event('direct'));
+    }
+});
         });
     </script>
 
