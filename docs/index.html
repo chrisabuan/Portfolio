@@ -27,7 +27,9 @@
     <!-- Header & Navigation -->
     <header class="bg-sky-100 sticky top-0 z-50">
         <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-gray-900">Chris Abuan</h1>
+            <h1 class="text-2xl font-bold text-gray-900">
+                <a href="#home" onclick="showPage('home', event)" class="hover:text-blue-500 transition duration-300">Chris Abuan</a>
+            </h1>
             <nav class="hidden md:flex space-x-8">
                 <a href="#home" class="nav-link text-sm text-gray-700 hover:text-blue-500 transition duration-300 active" onclick="showPage('home', event)">Home</a>
                 <a href="#resume" class="nav-link text-sm text-gray-700 hover:text-blue-500 transition duration-300" onclick="showPage('resume', event)">Resume</a>
