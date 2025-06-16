@@ -53,7 +53,7 @@
         <!-- Home Section -->
         <section id="home">
             <div class="bg-white p-8 rounded-lg shadow-lg text-center">
-                <img src="chrisabuanphoto.jpg" alt="Chris Picture" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500">
+                <img src="chrisabuanphoto.jpg" alt="Chris Picture" class="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500" onerror="this.onerror=null; this.src='https://placehold.co/128x128/3b82f6/ffffff?text=CA';">
                 <h2 class="text-4xl font-bold text-gray-900 mb-2">Welcome to My Portfolio</h2>
                 <p class="text-lg text-gray-600 mb-6">I'm an enthusiastic Product Manager dedicated to building great experiences.</p>
                 <a href="#projects" onclick="showPage('projects', event)" class="bg-blue-500 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-600 transition duration-300 inline-block">View My Work</a>
@@ -103,7 +103,8 @@
                     </a>
                 </div>
                 
-                <div class="border rounded-lg overflow-hidden" style="height: 1100px;"> <iframe 
+                <div class="border rounded-lg overflow-hidden" style="height: 1100px;">
+                    <iframe 
                         src="https://drive.google.com/file/d/1GUl3eES2Thab44jZ5FG1KrkBkL1pDZaG/preview" 
                         width="100%" 
                         height="100%" 
@@ -179,7 +180,7 @@
         <div class="container mx-auto px-6 py-2 text-center text-gray-600">
             <p class="text-sm">&copy; 2025 Chris Abuan. All Rights Reserved.</p>
             <div class="flex justify-center space-x-4 mt-2 text-sm">
-                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.linkedin.com/in/christopherabuan/" class="hover:text-blue-500" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </footer>
@@ -195,7 +196,12 @@
 
         // --- Page Navigation Logic ---
         function showPage(pageId, event) {
-            event.preventDefault(); // Prevent the default anchor link behavior
+            if (event) {
+                event.preventDefault(); // Prevent the default anchor link behavior
+            }
+            
+            // Update the URL hash
+            window.location.hash = pageId;
 
             // Hide all main sections
             document.querySelectorAll('main > section').forEach(section => {
@@ -216,6 +222,11 @@
                 }
             });
 
+             // If the name link was clicked, make sure the 'Home' nav link is also active
+             if (pageId === 'home') {
+                 document.querySelector('nav a[href="#home"]').classList.add('active');
+            }
+
             // Close mobile menu after selection
             if (!mobileMenu.classList.contains('hidden')) {
                 mobileMenu.classList.add('hidden');
@@ -225,20 +236,21 @@
             window.scrollTo(0, 0);
         }
 
-    // Set the default page on initial load
-    document.addEventListener('DOMContentLoaded', () => {
-   	// Get the section name from the URL (e.g., #projects)
-    	const pageId = window.location.hash.substring(1);
+        // --- FIXED: Set the default page on initial load and handle back/forward buttons ---
+        function handleRouting() {
+            const pageId = window.location.hash.substring(1);
+            if (pageId) {
+                showPage(pageId);
+            } else {
+                showPage('home');
+            }
+        }
 
-	// If the URL has a valid hash like #resume or #projects, show that page
-	if (pageId === 'resume' || pageId === 'projects') {
-            showPage(pageId, new Event('direct'));
-	} else {
-            // Otherwise, default to the home page
-            showPage('home', new Event('direct'));
-    }
-});
-        });
+        // Listen for page load
+        document.addEventListener('DOMContentLoaded', handleRouting);
+        
+        // Listen for hash changes (for back/forward browser buttons)
+        window.addEventListener('hashchange', handleRouting);
     </script>
 
 </body>
